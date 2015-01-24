@@ -129,25 +129,27 @@ ShowPlayerHealthInfo(playerid)
 	HideBodyPreviewUI(playerid);
 	ShowBodyPreviewUI(playerid);
 
-	SetBodyPreviewLabel(playerid, 0, tmp++, 35.0, sprintf("Head: %d", bodypartwounds[6]),
+	// Added a visual feedback with "Yes" : "No" based on varibles.
+	
+	SetBodyPreviewLabel(playerid, 0, tmp++, 35.0, sprintf("Head: %d", (bodypartwounds[6] > 0) ? ("Yes"):("No")),
 		bodypartwounds[6] ? RGBAToHex(max(bodypartwounds[6] * 50, 255), 0, 0, 255) : 0xFFFFFFFF);
 
-	SetBodyPreviewLabel(playerid, 0, tmp++, 25.0, sprintf("Torso: %d", bodypartwounds[0]),
+	SetBodyPreviewLabel(playerid, 0, tmp++, 25.0, sprintf("Torso: %d", (bodypartwounds[0] > 0) ? ("Yes"):("No")),
 		bodypartwounds[0] ? RGBAToHex(max(bodypartwounds[0] * 50, 255), 0, 0, 255) : 0xFFFFFFFF);
 
-	SetBodyPreviewLabel(playerid, 0, tmp++, 30.0, sprintf("Arm R: %d", bodypartwounds[3]),
+	SetBodyPreviewLabel(playerid, 0, tmp++, 30.0, sprintf("Arm R: %d", (bodypartwounds[3] > 0) ? ("Yes"):("No")),
 		bodypartwounds[3] ? RGBAToHex(max(bodypartwounds[3] * 50, 255), 0, 0, 255) : 0xFFFFFFFF);
 
-	SetBodyPreviewLabel(playerid, 0, tmp++, 20.0, sprintf("Arm L: %d", bodypartwounds[2]),
+	SetBodyPreviewLabel(playerid, 0, tmp++, 20.0, sprintf("Arm L: %d", (bodypartwounds[2] > 0) ? ("Yes"):("No")),
 		bodypartwounds[2] ? RGBAToHex(max(bodypartwounds[2] * 50, 255), 0, 0, 255) : 0xFFFFFFFF);
 
-	SetBodyPreviewLabel(playerid, 0, tmp++, 20.0, sprintf("Groin: %d", bodypartwounds[1]),
+	SetBodyPreviewLabel(playerid, 0, tmp++, 20.0, sprintf("Groin: %d", (bodypartwounds[1] > 0) ? ("Yes"):("No")),
 		bodypartwounds[1] ? RGBAToHex(max(bodypartwounds[1] * 50, 255), 0, 0, 255) : 0xFFFFFFFF);
 
-	SetBodyPreviewLabel(playerid, 0, tmp++, 20.0, sprintf("Leg R: %d", bodypartwounds[5]),
+	SetBodyPreviewLabel(playerid, 0, tmp++, 20.0, sprintf("Leg R: %d", (bodypartwounds[5] > 0) ? ("Yes"):("No")),
 		bodypartwounds[5] ? RGBAToHex(max(bodypartwounds[5] * 50, 255), 0, 0, 255) : 0xFFFFFFFF);
 
-	SetBodyPreviewLabel(playerid, 0, tmp++, 20.0, sprintf("Leg L: %d", bodypartwounds[4]),
+	SetBodyPreviewLabel(playerid, 0, tmp++, 20.0, sprintf("Leg L: %d", (bodypartwounds[4] > 0) ? ("Yes"):("No")),
 		bodypartwounds[4] ? RGBAToHex(max(bodypartwounds[4] * 50, 255), 0, 0, 255) : 0xFFFFFFFF);
 
 	tmp = 0;
